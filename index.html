@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="brainzobba.js"></script>
+    <title>ぶれいんぞっば</title>
+    <style>
+        textarea{
+            width:300px;
+            height:300px;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var zoba = new Brainzobba()
+            document.querySelector("#inter").onclick = function(){
+                var inputdata = document.querySelector("#inputdata")
+                var outdata = document.querySelector("#outdata")
+
+                outdata.innerText = zoba.exec(inputdata.value);
+            }
+        }
+    </script>
+</head>
+<body>
+    <textarea id="inputdata"></textarea><br>
+    <input type="button" id="inter" value="ぞば！">
+    <div id="outdata"></div>
+    <ol>
+        <li>ぞばり ポインタをインクリメントする。ポインタをptrとすると、C言語の「ptr++;」に相当する。</li>
+        <li>ぞば無双！ ポインタをデクリメントする。C言語の「ptr--;」に相当。</li>
+        <li>ぞ ポインタが指す値をインクリメントする。C言語の「(*ptr)++;」に相当。</li>
+        <li>ば ポインタが指す値をデクリメントする。C言語の「(*ptr)--;」に相当。</li>
+        <li>ぞばんざーい ポインタが指す値を出力する。C言語の「putchar(*ptr);」に相当。</li>
+        <li>イマジネイティブ！ ポインタが指す値が0なら、対応する ] の直後までジャンプする。C言語の「while(*ptr){」に相当。</li>
+        <li>ロックオン！ ポインタが指す値が0でないなら、対応する [ にジャンプする。C言語の「}」に相当。</li>
+    </ol><br>
+    例:ぞばりぞぞぞぞぞぞぞぞぞイマジネイティブ！ぞば無双！ぞぞぞぞぞぞぞぞぞばりばロックオン！ぞば無双！ぞばんざーいぞばりぞぞぞぞぞぞぞイマジネイティブ！ぞば無双！ぞぞぞぞぞばりばロックオン！ぞば無双！ぞぞばんざーいぞぞぞぞぞぞぞぞばんざーいぞばんざーいぞぞぞぞばんざーいイマジネイティブ！ばロックオン！ぞばりぞぞぞぞぞぞぞぞイマジネイティブ！ぞば無双！ぞぞぞぞぞばりばロックオン！ぞば無双！ぞばんざーいぞばりぞぞぞぞぞぞぞぞぞぞぞイマジネイティブ！ぞば無双！ぞぞぞぞぞぞばりばロックオン！ぞば無双！ぞばんざーいぞばりぞぞぞぞぞぞぞぞイマジネイティブ！ぞば無双！ぞぞぞぞばりばロックオン！ぞば無双！ぞばんざーいぞぞぞぞばんざーいばばばばばばぞばんざーいばばばばばばばばぞばんざーいイマジネイティブ！ばロックオン！ぞばりぞぞぞぞぞぞぞぞイマジネイティブ！ぞば無双！ぞぞぞぞぞばりばロックオン！ぞば無双！ぞぞばんざーいイマジネイティブ！ばロックオン！ぞぞぞぞぞぞぞぞぞぞぞばんざーい
+</body>
+</html>
